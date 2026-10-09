@@ -1,0 +1,111 @@
+/* style.css */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #fcf9f6;
+    color: #333333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+.recipe-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+header h1 {
+    color: #d35400;
+    font-size: 2.2em;
+    text-align: center;
+    margin-top: 0;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f5e4d3;
+}
+
+h2 {
+    color: #e67e22;
+    font-size: 1.4em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    border-left: 4px solid #e67e22;
+}
+
+ul {
+    padding-left: 25px;
+}
+
+.ingredients li {
+    margin-bottom: 15px;
+}
+
+/* ปรับแต่งส่วนของรายการขั้นตอนวิธีทำ */
+.step-list {
+    padding-left: 25px;
+}
+
+.step-list li {
+    margin-bottom: 40px; /* เพิ่มระยะห่างระหว่างแต่ละขั้นตอน */
+}
+
+.step-text {
+    margin-bottom: 15px; /* ระยะห่างระหว่างข้อความกับรูปภาพ */
+}
+
+/* ปรับแต่งรูปภาพในแต่ละขั้นตอน */
+.step-img {
+    display: block;
+    width: 100%; /* ให้รูปขยายเต็มความกว้างของคอนเทนเนอร์ */
+    max-width: 600px; /* จำกัดความกว้างสูงสุดไม่ให้ใหญ่เกินไป */
+    height: auto; /* รักษาสัดส่วนรูปภาพ */
+    border-radius: 8px; /* ขอบมุมโค้งมน */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้รูปดูมีมิติ */
+    margin: 0 auto; /* จัดรูปให้อยู่กึ่งกลาง */
+}
+
+strong {
+    color: #2c3e50;
+}
+
+footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eeeeee;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+a {
+    color: #d35400;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* จัดการ 4 รูปสุดท้ายแบบภาพโชว์ (ใช้ Flexbox ตามโจทย์ Assignment 3) */
+.showcase-gallery {
+    display: flex;
+    flex-wrap: wrap; /* ให้รูปปัดตกลงมาบรรทัดใหม่ถ้ารูปเกิน */
+    gap: 15px; /* ระยะห่างระหว่างรูป */
+    justify-content: center; /* จัดให้อยู่กึ่งกลาง */
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px dashed #f5e4d3; /* เส้นคั่นบางๆ ก่อนเริ่มโชว์รูป */
+}
+
+.showcase-img {
+    /* กำหนดความกว้าง 48% เพื่อให้แสดงแถวละ 2 รูปพอดี */
+    width: 48%; 
+    height: 200px;
+    /* ใช้ object-fit: cover เพื่อ crop รูปอัตโนมัติตามโจทย์ ไม่ให้ภาพบี้ */
+    object-fit: cover; 
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
